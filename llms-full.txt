@@ -5291,6 +5291,7 @@ e gerenciamento de ações com agrupamento responsivo via `p-page-actions-layout
 | `literals` | `'p-literals'` | `PoPageDefaultLiterals` | sim | - | Permite a customização das literais utilizadas no componente. |
 | `pageActionsLayout` | `'p-page-actions-layout'` | `string` | sim | `default` | Define o layout de exibição das ações no cabeçalho. |
 | `pageHeaderType` | `'p-page-header-type'` | `string` | sim | `primary` | Define o tipo de cabeçalho da página. |
+| `refresh` | `p-refresh` | `Function` | sim | - | Define a função de callback executada ao clicar no botão de atualização (refresh) ao lado do subtítulo da página. |
 | `subtitle` | `'p-subtitle'` | `string` | sim | - | Define um texto de apoio ou informações adicionais logo abaixo do título principal. |
 | `title` | `'p-title'` | `string` | sim | - | Define o título principal da página. |
 
@@ -5892,6 +5893,7 @@ Veja mais sobre os padrões utilizados nas requisições no [Guia de implementa�
 
 | Propriedade | Alias | Tipo | Opcional | Padrão | Descrição |
 |---|---|---|---|---|---|
+| `allowDirectNavigation` | `'p-allow-direct-navigation'` | `boolean` | sim | `false` | Permite a navegação direta ao clicar em um step (passo) previamente preenchido e validado, |
 | `beforeSendAction` | `'p-before-send'` | `unknown` | sim | - | Função chamada após realizar a confirmação da execução no PoPageJobScheduler. |
 | `breadcrumb` | `'p-breadcrumb'` | `PoBreadcrumb` | sim | - | Objeto com as propriedades do breadcrumb. |
 | `componentsSize` | `'p-components-size'` | `string` | sim | `medium` | Define o tamanho dos componentes de formulário no template: |
@@ -11711,6 +11713,8 @@ Indicação de uso:
 | `items` | `Array<PoHeaderActionToolItem>` | sim | Itens de ações |
 | `label` | `string` | sim | Título da ação |
 | `link` | `string` | sim | link utilizado no redirecionamento das páginas. |
+| `onClose` | `(label?: string) => void` | sim | Função executada quando o popup ou popover da ação é fechado. |
+| `onOpen` | `(label?: string) => void` | sim | Função executada quando o popup ou popover da ação é aberto. |
 | `popover` | `PoHeaderActionPopoverAction` | sim | Template que será utilizado na ação |
 | `tooltip` | `string` | sim | Texto que será apresentado na tooltip |
 
@@ -11810,6 +11814,8 @@ Interface* que define a seção de Customer do header.
 | `avatar` | `string` | não | Logo representando o perfil |
 | `customerBrand` | `string` | não | Imagem da marca |
 | `items` | `Array<PoHeaderActionToolItem>` | sim | Itens de ações |
+| `onClose` | `Function` | sim | Função executada quando o popup ou popover da seção de Customer é fechado. |
+| `onOpen` | `Function` | sim | Função executada quando o popup ou popover da seção de Customer é aberto. |
 | `popover` | `PoHeaderActionPopoverAction` | sim | Template que será utilizado na ação |
 | `status` | `'positive' | 'negative' | 'warning' | 'disabled'` | sim | Indicação representando o estado do usuário |
 
